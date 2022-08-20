@@ -1,0 +1,661 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Barlow', sans-serif;
+  /* color:white; */
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  
+}
+p{
+  line-height:1.5rem;;
+  font-size:1rem;
+  
+}
+
+.hidden{
+  display:none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width:100%;
+  background: none;
+  position: absolute;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:1.6rem 2.5rem 0 2.5rem;
+  color:white;
+}
+
+.logo{
+  width:5.4rem;
+  height:1.2rem;
+}
+.nav-bar {
+  /* width:30%; */
+}
+
+.nav-bar ul{
+  display:flex;
+  align-items: center;
+  gap:2.5rem;
+  margin:0;
+}
+
+.main{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap:4rem;
+  padding-top:8rem;
+  background-image: url('/img/desktop/image-header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:white;
+
+}
+
+.main h1{
+  font-family: 'Fraunces', serif;
+  font-size:3rem;
+  letter-spacing: .5rem;
+}
+
+.contact{
+  color:hsl(212, 27%, 19%);
+  padding:.6rem 1.2rem;
+  background-color: white;
+  border-radius: 30%;
+  transition:.3s ease-in;
+  font-weight: 600;
+
+}
+
+.contact:hover{
+  background-color: rgb(44, 181, 240);
+  cursor: pointer;
+
+}
+
+
+.arrow-down:hover{
+  cursor: pointer;
+}
+
+.transform--container, .stand-out-container, .photo-graphic-container{
+  display: flex;
+  height: 60vh;
+  
+}
+
+.section-info{
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap:.5rem;
+}
+
+.section-info *{
+  text-align: left;
+  width:50%;
+}
+
+.section-heading, .photo-graphic--heading{
+  margin:0;
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+  /* width:40%; */
+  /* color:hsl(232, 10%, 55%) */
+  color:hsl(212, 27%, 19%);
+  /* z-index: -1; */
+  
+}
+
+.section-p{
+  color: hsl(210, 4%, 67%)
+}
+
+.section-link-btn{
+  color:hsl(212, 27%, 19%);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness:2px ;
+  text-underline-offset: 1px;
+  /* z-index:4; */
+  transition:.3s ease-in-out;
+}
+
+.section-link-btn:hover{
+  text-decoration-thickness:5px ;
+}
+
+.transform--more-btn {
+  text-decoration-color:hsl(51, 100%, 49%);
+}
+
+.stand-out--btn {
+  text-decoration-color:hsl(7, 90%, 73%) ;
+}
+
+.section-image{
+  background-position: center;
+  background-size: contain;
+  width:50%;
+}
+
+.transform--image{
+  background-image: url('/img/desktop/image-transform.jpg');
+
+}
+
+.stand-out--image {
+  background-image: url('/img/desktop/image-stand-out.jpg');
+}
+
+
+
+.photo-graphic--info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap:.5rem;
+  /* margin-bottom:3rem; */
+}
+
+
+
+.photo-graphic--heading{
+  font-size: 1.2rem;
+  color:hsl(212, 27%, 19%)
+}
+
+.photo-graphic--p{
+  width:45%;
+  text-align: center;
+  margin-bottom:2rem;
+  font-size: .9rem;
+  
+}
+
+.graphic--p{
+  color:hsl(167, 40%, 24%);
+}
+
+.photo-p{
+  color:hsl(198, 62%, 26%)
+}
+
+.graphic{
+  background-image: url('/img/desktop/image-graphic-design.jpg');
+  background-size: contain;
+  background-position: center;
+  width:50%;
+}
+
+.photo{
+  background-image: url('/img/desktop/image-photography.jpg');
+  background-size: contain;
+  background-position: center;
+  width:50%;
+
+}
+
+
+.testimonials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  gap:3rem;
+
+}
+
+.testimonials--clients{
+  display:flex;
+  gap:3rem;
+  width:70%;
+  
+}
+
+.testimonials--1{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:2rem;
+}
+
+.testimonials--heading{
+  color: hsl(210, 4%, 67%);
+  letter-spacing: .3rem;
+  font-size: 1.3rem;
+}
+
+.testimonials--image{
+  width:4rem;
+  border-radius: 50%;
+}
+
+
+.testimonials--p{
+  text-align: center;
+  color: hsl(213, 9%, 39%);
+  font-size: .85rem;
+}
+
+.testtimonials--client-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:.3rem;
+  font-family: 'Fraunces', serif;
+}
+
+.testimonials--client-name{
+  margin:0;
+  font-size:1rem;
+}
+
+.testimonials--clients-position{
+  margin:0;
+  font-size:.6rem;
+  color: hsl(210, 4%, 67%);
+}
+
+
+.gallery{
+  display:flex;
+  height:55vh;
+}
+
+.gallery *{
+  width:25%;
+}
+
+
+
+.footer {
+  height:40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+  background-color:  hsl(168, 58%, 64%);
+}
+
+.footer--nav ul{
+  display:flex;
+  gap:2.5rem;
+  font-size:.85rem;
+  color:hsl(168, 34%, 41%);
+}
+
+.links ul{
+  display:flex;
+  gap:1.5rem;
+  
+}
+
+.links--icons{
+  width:1rem;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* phones */
+@media(max-width:500px) {
+  header {
+    width:100%;
+    background: none;
+    position: absolute;
+    display:flex;
+    /* flex-direction: ; */
+    justify-content: space-between;
+    align-items: center;
+    padding:1.6rem 1.5rem 0 1.5rem;
+    color:white;
+  }
+
+  .open-nav{
+    display:flex;
+  }
+  
+  .logo{
+    width:7rem;
+    height:2rem;
+  }
+  .nav-bar {
+    /* display:none */
+    transition:  2s ease-in-out;
+  }
+
+
+  
+  .nav-bar ul{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color:hsl(213, 9%, 39%);
+    position: absolute;
+    width:80%;
+    left:0;
+    right:0;
+    top:7rem;
+    gap:2.5rem;
+    padding:2rem 0;
+    margin:0 auto;
+    font-size: 1.3rem;
+  }
+  
+  .main{
+    width:100%;
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: csenter; */
+    align-items: center;
+    gap:2rem;
+    padding-top:15rem;
+    background-image: url('/img/mobile/image-header.jpg');
+    
+  
+  }
+  
+  .main h1{
+    font-size:2.6rem;
+    letter-spacing: .5rem;
+    text-align: center;
+  }
+  
+  .contact{
+   
+    padding:1rem 1.8rem;
+    background-color: hsl(51, 100%, 49%);
+    transition:.3s ease-in;
+    font-weight: 700;
+
+  
+  }
+  
+  
+  .transform--container, .stand-out-container, .photo-graphic-container{
+    display: flex;
+    flex-direction: column;
+    height:80vh;
+    
+  }
+  
+  .transform--container{
+    transform: scaleY(-1);
+  }
+  .section-info{
+    width:100%;
+    height:50%;
+    gap:.5rem;
+    
+  }
+
+  .transform--info {
+    transform: scaleY(-1);
+  }
+  
+  .section-info *{
+    text-align: center;
+    width:70%;
+  }
+  
+  .section-heading, .photo-graphic--heading{
+    margin:0;
+    font-size: 2rem;
+    width:70%;
+    font-weight:800;
+    text-align: center;
+ 
+    
+  }
+  
+  .section-p{
+    color: hsl(210, 4%, 67%);
+    width:80%;
+    
+  }
+  
+  .section-link-btn{
+    font-weight: 900;
+    font-size: .9rem;
+   
+  }
+  
+
+  
+  .section-image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:50%;
+    
+  }
+
+  .transform--image {
+    transform: scaleY(-1);
+  }
+  
+  .transform--image{
+    background-image: url('/img/mobile/image-transform.jpg');
+  
+  }
+  
+  .stand-out--image {
+    background-image: url('/img/mobile/image-stand-out.jpg');
+  }
+  
+ .photo-graphic-container{
+  height:90vh
+ }
+  
+  .photo-graphic--info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap:.5rem;
+    /* margin-bottom:3rem; */
+  }
+  
+  
+  
+  .photo-graphic--heading{
+    font-size: 1.5rem;
+    color:hsl(212, 27%, 19%)
+  }
+  
+  .photo-graphic--p{
+    width:70%;
+    text-align: center;
+    margin-bottom:2rem;
+    font-size: 1rem;
+    
+  }
+  
+  .graphic--p{
+    color:hsl(167, 40%, 24%);
+  }
+  
+  .photo-p{
+    color:hsl(198, 62%, 26%)
+  }
+   .photo, .graphic{
+    width:100%;
+    height:100%; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .graphic{
+    background-image: url('/img/mobile/image-graphic-design.jpg');
+   
+   
+  }
+  
+  .photo{
+    background-image: url('/img/mobile/image-photography.jpg');
+   
+   
+  
+  }
+  
+  
+  .testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height:130vh;
+    padding:5rem 0;
+    gap:3rem;
+  
+  }
+  
+  .testimonials--clients{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    width:70%;
+    
+    
+  }
+  
+  .testimonials--1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;height:33.33%
+  }
+  
+  .testimonials--heading{
+    
+    margin:0;
+    /* padding-top:15rem */
+  }
+  
+  .testimonials--image{
+    width:4rem;
+    border-radius: 50%;
+  }
+  
+  
+  .testimonials--p{
+    text-align: center;
+    color: hsl(213, 9%, 39%);
+    font-size: .85rem;
+  }
+  
+  .testtimonials--client-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.3rem;
+    
+  }
+  
+  .testimonials--client-name{
+    margin:0;
+    font-size:1rem;
+  }
+  
+  .testimonials--clients-position{
+    margin:0;
+    font-size:.6rem;
+    color: hsl(210, 4%, 67%);
+  }
+  
+  
+  .gallery{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    height:55vh;
+  }
+  
+  .gallery *{
+    width:100%;
+  }
+  
+  
+  
+  .footer {
+    height:40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    background-color:  hsl(168, 58%, 64%);
+  }
+  
+  .footer--nav ul{
+    display:flex;
+    gap:2.5rem;
+    font-size:.85rem;
+    color:hsl(168, 34%, 41%);
+  }
+  
+  .links ul{
+    display:flex;
+    gap:1.5rem;
+    
+  }
+  
+  .links--icons{
+    width:1rem;
+  }
+  
+
+
+}
