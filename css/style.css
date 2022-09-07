@@ -442,7 +442,7 @@ header {
   .transform--container, .stand-out-container, .photo-graphic-container{
     display: flex;
     flex-direction: column;
-    height:80vh;
+    height:90vh;
     
   }
   
@@ -572,7 +572,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height:130vh;
+    height:140vh;
     padding:5rem 0;
     gap:3rem;
   
@@ -675,4 +675,12 @@ header {
   
 
 
+}
+
+@media (max-width:380px){
+
+  .testimonials{
+    height:170vh;
+  
+  }
 }
